@@ -58,8 +58,13 @@ def githubCommands():
 
     for i in range(2, len(args)):
         print("git add " + args[i])
-        #subprocess.run(["make", "tests_run"], capture_output=True)
+        subprocess.run(["git", "add", args[i]])
+
     print("git commit " + args[1])
+    subprocess.run(["git", "commit", "-m", args[1]])
+
+
+    subprocess.run(["git", "push", "origin", "master"])
     print("git push origin master")
 
 if __name__ == '__main__':
