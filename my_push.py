@@ -54,10 +54,10 @@ def checkUTTest():
 
 def githubCommands():
     args = sys.argv
-    for i in range(2, len(args)):
+    for i in range(1, len(args)):
         subprocess.run(["git", "add", args[i]])
-    subprocess.run(["git", "commit", "-m", "\"" + args[1] + "\""])
-    subprocess.run(["git", "push", "origin", "master"])
+    subprocess.run(["git", "commit"])
+    subprocess.run(["git", "push"])
 
 if __name__ == '__main__':
     checkFTTest()
