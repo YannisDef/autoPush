@@ -11,13 +11,13 @@ def checkFTTest():
     TFResult = TFResult[TFResult.rfind(' '):len(TFResult)]
 
     if int(TFResult) == 100:
-        print("\tYes c'est validé :)")
         checkUTTest()
     else:
         print("\t[ERROR]: all unit tests are not OK")
         subprocess.run(["./tests/functionnal_tests/mouli.sh"])
 
 def checkUTTest():
+    print("\tYes c'est validé :)")
     print("\nSECOND STEP: TU")
     unitTestResult = subprocess.run(["make", "tests_run"], capture_output=True)
     UTResult = str(unitTestResult)
@@ -32,13 +32,13 @@ def checkUTTest():
     passing = passing[0:passing.find('\\')]
 
     if tests == passing:
-        print("\tYes c'est validé :)")
         githubCommands()
     else:
         print("\t[ERROR]: all fonctional tests are not OK")
         subprocess.run(["./tests/functionnal_tests/mouli.sh"])
 
 def githubCommands():
+    print("\tYes c'est validé :)")
     args = sys.argv
     for i in range(1, len(args)):
         subprocess.run(["git", "add", args[i]])
