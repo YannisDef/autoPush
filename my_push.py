@@ -1,18 +1,4 @@
 #!/bin/python3
-
-#? FAIRE UNIT TEST
-#?   si 100% -> FAIRE TEST FONCTIONNEL
-#?   si != 100% -> PRINT "IMPOSSIBLE DE PUSH PROBLEME TU"
-#?       si 100% -> git add les files ; git commit $1 ; git push origin master
-#?       si != 100% -> PRINT "IMPOSSIBLE DE PUSH PROBLEME TF"
-
-#i=1
-#for arg in "$@"
-#do
-#    printf "argument $i: $arg\n"
-#    i=$((i + 1 ))
-#done
-
 import subprocess
 import sys
 
