@@ -20,13 +20,12 @@ def checkUTTest():
     unitTestResult = str(subprocess.run(["make", "tests_run"], capture_output=True))
     UTResult = unitTestResult[unitTestResult.rfind("Tested"):len(unitTestResult)]
 
-    tests = UTResult[UTResult.find('m') + 1:len(UTResult)]
-    tests = tests[0:tests.find('\\')]
+    strPercent = UTResult[UTResult.find('m') + 1:len(UTResult)]
+    tests = strPercent[0:strPercent.find('\\')]
 
     UTResult = UTResult[UTResult.find("Passing"):len(UTResult)]
 
-    passing = UTResult[UTResult.find('m') + 1:len(UTResult)]
-    passing = passing[0:passing.find('\\')]
+    passing = strPercent[0:strPercent.find('\\')]
 
     if tests == passing:
         githubCommands()
