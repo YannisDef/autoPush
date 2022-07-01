@@ -17,9 +17,9 @@ def checkUTTest():
     print("\tYes c'est validé :)")
     print("\nSECOND STEP: TU")
     unitTestResult = str(subprocess.run(["make", "tests_run"], capture_output=True))
+
     UTResult = unitTestResult[unitTestResult.rfind("Tested"):len(unitTestResult)]
     strPercent = UTResult[UTResult.find('m') + 1:len(UTResult)]
-
     nbTests = strPercent[0:strPercent.find('\\')]
     UTResult = UTResult[UTResult.find("Passing"):len(UTResult)]
     nbTestsOK = strPercent[0:strPercent.find('\\')]
