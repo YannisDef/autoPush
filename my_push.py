@@ -4,8 +4,7 @@ import sys
 
 def checkFTTest():
     print("FIRST STEP: TF")
-    functionnalResult = str(subprocess.run(["./tests/functionnal_tests/mouli.sh"], capture_output=True))
-    functionnalResult = functionnalResult.split('%')[0]
+    functionnalResult = str(subprocess.run(["./tests/functionnal_tests/mouli.sh"], capture_output=True)).split('%')[0]
     functionnalResult = functionnalResult[functionnalResult.rfind(' '):len(functionnalResult)]
 
     if int(functionnalResult) == 100:
@@ -19,15 +18,13 @@ def checkUTTest():
     print("\nSECOND STEP: TU")
     unitTestResult = str(subprocess.run(["make", "tests_run"], capture_output=True))
     UTResult = unitTestResult[unitTestResult.rfind("Tested"):len(unitTestResult)]
-
     strPercent = UTResult[UTResult.find('m') + 1:len(UTResult)]
-    tests = strPercent[0:strPercent.find('\\')]
 
+    nbTests = strPercent[0:strPercent.find('\\')]
     UTResult = UTResult[UTResult.find("Passing"):len(UTResult)]
+    nbTestsOK = strPercent[0:strPercent.find('\\')]
 
-    passing = strPercent[0:strPercent.find('\\')]
-
-    if tests == passing:
+    if nbTests == nbTestsOK:
         githubCommands()
     else:
         print("\t[ERROR]: all fonctional tests are not OK")
