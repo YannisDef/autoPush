@@ -4,13 +4,11 @@ import sys
 
 def checkFTTest():
     print("FIRST STEP: TF")
-    functionnalResult = subprocess.run(["./tests/functionnal_tests/mouli.sh"], capture_output=True)
+    functionnalResult = str(subprocess.run(["./tests/functionnal_tests/mouli.sh"], capture_output=True))
+    functionnalResult = functionnalResult.split('%')[0]
+    functionnalResult = functionnalResult[functionnalResult.rfind(' '):len(functionnalResult)]
 
-    TFResult = str(functionnalResult)
-    TFResult = TFResult.split('%')[0]
-    TFResult = TFResult[TFResult.rfind(' '):len(TFResult)]
-
-    if int(TFResult) == 100:
+    if int(functionnalResult) == 100:
         checkUTTest()
     else:
         print("\t[ERROR]: all unit tests are not OK")
@@ -20,7 +18,6 @@ def checkUTTest():
     print("\tYes c'est validé :)")
     print("\nSECOND STEP: TU")
     unitTestResult = str(subprocess.run(["make", "tests_run"], capture_output=True))
-#    UTResult = str(unitTestResult)
     UTResult = unitTestResult[unitTestResult.rfind("Tested"):len(unitTestResult)]
 
     tests = UTResult[UTResult.find('m') + 1:len(UTResult)]
