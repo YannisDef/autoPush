@@ -19,9 +19,9 @@ def checkFTTest():
 def checkUTTest():
     print("\tYes c'est validé :)")
     print("\nSECOND STEP: TU")
-    unitTestResult = subprocess.run(["make", "tests_run"], capture_output=True)
-    UTResult = str(unitTestResult)
-    UTResult = UTResult[UTResult.rfind("Tested"):len(UTResult)]
+    unitTestResult = str(subprocess.run(["make", "tests_run"], capture_output=True))
+#    UTResult = str(unitTestResult)
+    UTResult = unitTestResult[unitTestResult.rfind("Tested"):len(unitTestResult)]
 
     tests = UTResult[UTResult.find('m') + 1:len(UTResult)]
     tests = tests[0:tests.find('\\')]
