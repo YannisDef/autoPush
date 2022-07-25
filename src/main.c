@@ -1,9 +1,8 @@
 /*
-** EPITECH PROJECT, 2020
-** main.c
-** File description:
-** - Call project with start_project function
-** - Print Help if arg is -h
+**
+** STD::VECTOR IN C
+** Rigolo2015, Yannis, 2022
+** 
 */
 
 #include "project.h"

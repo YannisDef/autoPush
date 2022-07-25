@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2020
-** start_project.c
-** File description:
-** Principal loop of the project
+**
+** STD::VECTOR IN C
+** Rigolo2015, Yannis, 2022
+** 
 */
 
 #include <stdio.h>

@@ -10,7 +10,6 @@ You can easily change the python script to be usefull with your files and tests
   ./my_push file1 file2 ...
 ```
 
-
 ## 🚀 About Me
 I try to create some cool libs (:
 ## Authors

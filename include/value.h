@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** basicRoot
-** File description:
-** value
+**
+** STD::VECTOR IN C
+** Rigolo2015, Yannis, 2022
+** 
 */
 
 #ifndef VALUE_H_

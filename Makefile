@@ -1,14 +1,12 @@
 ##
-## EPITECH PROJECT, 2020
-## Makefile
-## File description:
-## classic Makefile with with unit tests
+##
+## STD::VECTOR IN C
+## Rigolo2015, Yannis, 2022
+## 
 ##
 
 CC	=	gcc
 
-
-##?				NORMAL TESTS
 MAIN	=	src/main.c	\
 
 SRC		=	src/start_project.c			\
@@ -17,10 +15,8 @@ OBJ		=	$(SRC:.c=.o)
 
 NAME	=	project
 
-CPPFLAGS	=	-I./include -Wall -Wextra -g3
-#!#######################################################
+CPPFLAGS	=	-I./include -Wall -Wextra
 
-##?				UNIT TESTS
 COVER		=	--coverage
 
 CRITERION	=	-lcriterion
@@ -34,7 +30,6 @@ OBJ_TEST	=	$(SRC_TEST:.c=.o)
 
 GCDA		=	*.gcda
 GCNO		=	*.gcno
-#!#######################################################
 
 all:	$(NAME)
 

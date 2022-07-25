@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2022
-** NAME OF THE PROJECT
-** File description:
-** Auto repo construction
+**
+** STD::VECTOR IN C
+** Rigolo2015, Yannis, 2022
+** 
 */
 
 #ifndef PROJECT_H_
